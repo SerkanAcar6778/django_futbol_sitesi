@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from .models import *
 # Create your views here.
 def index(request):
-    return render(request,"home_temps/index.html")
+    clup = clubs.objects.all()
+    return render(request,"home_temps/index.html", {"clup": clup})

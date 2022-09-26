@@ -54,10 +54,16 @@
                      <div class="feature-matchs">
                         <div class="team-btw-match">
                            <ul>
+                              {% for i in clup %}
+                           
+                           
                               <li>
-                                 <img src="images/img-01_002.png" alt="">
-                                 <span>Portugal</span>
+                              {% if i.takim_logo.url %}
+                                 <img src="{{i.takim_logo.url}}" alt="">
+                              {% endif %}
+                                 <span>{{i.takim_isim}}</span>
                               </li>
+                              {% endfor %}
                               <li class="vs"><span>vs</span></li>
                               <li>
                                  <img src="images/img-02.png" alt="">
