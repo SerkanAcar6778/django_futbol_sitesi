@@ -1,4 +1,5 @@
 from distutils.command.upload import upload
+from email.policy import default
 from django.db import models
 
 # Create your models here.
@@ -12,5 +13,4 @@ class sosyal_media(models.Model):
 class clubs(models.Model):
     takim_isim = models.CharField(max_length=200)
     takim_isim_kisaltma = models.CharField(max_length=4)
-    takim_logo = models.ImageField(upload_to='takim_resim/', blank = True, null = True, verbose_name='Takım Resmi Ekle')
-    
+    takim_logo = models.ImageField(upload_to='takim_resim/', default="mnc.png" ,blank = True,null = True,verbose_name='Takım Resmi Ekle')
