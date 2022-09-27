@@ -13,7 +13,6 @@ class sosyal_media(models.Model):
 class clubs(models.Model):
     takim_isim = models.CharField(max_length=200)
     takim_isim_kisaltma = models.CharField(max_length=4)
-<<<<<<< HEAD
     takim_logo = models.ImageField(upload_to='takim_resim/', default='takim_resim/mnc.png' ,blank = True,null = True,verbose_name='Takım Resmi Ekle')
     def __str__(self) :
         return self.takim_isim
@@ -23,13 +22,3 @@ class club_point(models.Model):
     point = models.BigIntegerField()
     win = models.BigIntegerField()
     loss = models.BigIntegerField()
-
-class club_vs(models.Model):
-    takim1 = models.ForeignKey(clubs,related_name="takim1",blank=True,on_delete=models.CASCADE)
-    gol1 = models.BigIntegerField()
-    takim2 = models.ForeignKey(clubs,related_name="takim2",blank=True,on_delete=models.CASCADE)
-    gol2 = models.BigIntegerField()
-    mac_durumu = models.BooleanField()
-=======
-    takim_logo = models.ImageField(upload_to='takim_resim/', default="takim_resim/mnc.png" ,blank = True,null = True,verbose_name='Takım Resmi Ekle')
->>>>>>> parent of e7fa78e (# add data/database)
