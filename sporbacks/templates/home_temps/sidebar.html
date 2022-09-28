@@ -55,8 +55,6 @@
                         <div class="team-btw-match">
                            <ul>
                               {% for i in clup %}
-                           
-                           
                               <li>
                               {% if i.takim_logo.url %}
                                  <img src="{{i.takim_logo.url}}" alt="">
@@ -130,18 +128,7 @@
                               </tr>
                            </thead>
                            <tbody>
-                              {% for i in club_point_status %}
-                              {% for j in clup %}
-                              {% if i.takim == j %}
-                              <tr>
-                                 <td><img width="40" src="{{j.takim_logo.url}}" alt="">{{j.takim_isim}}</td>
-                                 <td>{{i.point}}</td>
-                                 <td>{{i.win}}</td>
-                                 <td>{{i.loss}}</td>
-                              </tr>
-                              {% endif %}
-                              {% endfor %}
-                              {% endfor %}
+
                            </tbody>
                         </table>
                      </div>
