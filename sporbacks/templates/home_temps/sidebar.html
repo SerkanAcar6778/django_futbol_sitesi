@@ -57,7 +57,7 @@
                               {% for i in clup %}
                               <li>
                               {% if i.takim_logo.url %}
-                                 <img src="{{i.takim_logo.url}}" alt="">
+                                 <img width="50" src="{{i.takim_logo.url}}" alt="">
                               {% endif %}
                                  <span>{{i.takim_isim}}</span>
                               </li>
@@ -128,7 +128,18 @@
                               </tr>
                            </thead>
                            <tbody>
-
+                           {% for i in club_point_status %}
+                           {% for j in clup %}
+                           {% if i.takim == j %}
+                              <tr> 
+                                 <td> <img width="50" src="{{j.takim_logo.url}}" alt=""> {{j.takim_isim}} </td>
+                                 <td> {{i.point}} </td>
+                                 <td> {{i.win}} </td>
+                                 <td> {{i.loss}} </td>
+                              </tr>
+                           {% endif %}
+                           {% endfor %}
+                           {% endfor %}
                            </tbody>
                         </table>
                      </div>
