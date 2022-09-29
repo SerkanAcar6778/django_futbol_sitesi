@@ -8,3 +8,4 @@ admin.site.register(sosyal_media)
 class club_data(admin.ModelAdmin):
     list_display = ("takim_isim","takim_isim_kisaltma","takim_logo")
 admin.site.register(clup_point)
+admin.site.register(club_vs)

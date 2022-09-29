@@ -53,65 +53,25 @@
                   <aside id="sidebar" class="left-bar">
                      <div class="feature-matchs">
                         <div class="team-btw-match">
+                           {% for i in karsilasma_goster %}
                            <ul>
-                              {% for i in clup %}
                               <li>
-                              {% if i.takim_logo.url %}
-                                 <img width="50" src="{{i.takim_logo.url}}" alt="">
+                                 <img width="40" src="{{i.takim1.takim_logo.url}}" alt="">
+                                 <span>{{i.takim1}}</span>
+                              </li>
+                              {% if i.mac_durumu %}
+                              <li class="vs"><span style="color: red;">{{i.gol1}}</span></li>
+                              <li class="vs"><span>vs</span></li>
+                              <li class="vs"><span style="color: red;">{{i.gol2}}</span></li>
+                              {% else %}
+                              <li class="vs"><span>vs</span></li>
                               {% endif %}
-                                 <span>{{i.takim_isim}}</span>
-                              </li>
-                              {% endfor %}
-                              <li class="vs"><span>vs</span></li>
                               <li>
-                                 <img src="images/img-02.png" alt="">
-                                 <span>Germany</span>
+                                 <img width="40" src="{{i.takim2.takim_logo.url}}" alt="">
+                                 <span>{{i.takim2}}</span>
                               </li>
                            </ul>
-                           <ul>
-                              <li>
-                                 <img src="images/img-03_002.png" alt="">
-                                 <span>Portugal</span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/img-04_003.png" alt="">
-                                 <span>Germany</span>
-                              </li>
-                           </ul>
-                           <ul>
-                              <li>
-                                 <img src="images/img-05_002.png" alt="">
-                                 <span>Portugal</span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/img-06.png" alt="">
-                                 <span>Germany</span>
-                              </li>
-                           </ul>
-                           <ul>
-                              <li>
-                                 <img src="images/img-07_002.png" alt="">
-                                 <span>Portugal</span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/img-08.png" alt="">
-                                 <span>Germany</span>
-                              </li>
-                           </ul>
-                           <ul>
-                              <li>
-                                 <img src="images/img-05_002.png" alt="">
-                                 <span>Portugal</span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/img-06.png" alt="">
-                                 <span>Germany</span>
-                              </li>
-                           </ul>
+                           {% endfor %}
                         </div>
                      </div>
                   </aside>
@@ -132,7 +92,7 @@
                            {% for j in clup %}
                            {% if i.takim == j %}
                               <tr> 
-                                 <td> <img width="50" src="{{j.takim_logo.url}}" alt=""> {{j.takim_isim}} </td>
+                                 <td> <img width="40" src="{{j.takim_logo.url}}" alt=""> {{j.takim_isim}} </td>
                                  <td> {{i.point}} </td>
                                  <td> {{i.win}} </td>
                                  <td> {{i.loss}} </td>

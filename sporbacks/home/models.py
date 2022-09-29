@@ -22,3 +22,10 @@ class clup_point (models.Model):
     point = models.BigIntegerField()
     win = models.BigIntegerField()
     loss = models.BigIntegerField()
+
+class club_vs(models.Model):
+    takim1 = models.ForeignKey(clubs,related_name="takim1",blank=True,on_delete=models.CASCADE)
+    gol1 = models.BigIntegerField()
+    takim2 = models.ForeignKey(clubs,related_name="takim2",blank=True,on_delete=models.CASCADE, null=False)
+    gol2 = models.BigIntegerField()
+    mac_durumu = models.BooleanField()
