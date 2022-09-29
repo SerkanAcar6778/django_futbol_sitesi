@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
    <!-- Basic -->
@@ -8,7 +7,7 @@
    <!-- Mobile Metas -->
    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
    <!-- Site Metas -->
-   <title> Beyaz Futbol</title>
+   <title>Beyaz Futbol</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -16,14 +15,14 @@
    <link rel="shortcut icon" href="" type="image/x-icon" />
    <link rel="apple-touch-icon" href="">
    <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+   <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %}">
    <!-- Site CSS -->
-   <link rel="stylesheet" href="{% static 'style.css' %}">
+   <link rel="stylesheet" href=" {% static 'style.css' %}">
    <!-- Colors CSS -->
-   <link rel="stylesheet" href="{% static 'css/colors.css' %}">
+   <link rel="stylesheet" href=" {% static 'css/colors.css' %}">
    <!-- ALL VERSION CSS -->	
-   <link rel="stylesheet" href="{% static '}css/versions.css' %">
-   <!-- Responsive CSS -->
+   <link rel="stylesheet" href=" {% static 'css/versions.css' %}">
+   <!-- Responsive CSS --> 
    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
    <!-- Custom CSS -->
    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
@@ -43,25 +42,22 @@
       <div id="preloader">
          <img class="preloader" src="images/loading-img.gif" alt="">
       </div>
-      <!-- END LOADER -->
-
-{% block header %}
-{% include "includes/header.html" %}
-{% endblock header %}
-{% block sidebar %}
-
-{% endblock sidebar %}
-{% block content %}
-
-{% endblock content %}
-{% block slider %}
-
-{% endblock slider %}
-{% block footer %}
-   {% include "includes/footer.html" %}
-{% endblock footer %}
-
-      <!-- ALL JS FILES -->
+      <!-- LOADER -->
+      {% block header %}
+      {% include "includes/header.html" %}
+      {% endblock header %}
+      {% block sidebar %}
+      
+      {% endblock sidebar %}
+      {% block content %}
+      
+      {% endblock content %}
+      {% block slider %}
+      
+      {% endblock slider %}
+      {% block footer %}
+         {% include "includes/footer.html" %}
+      {% endblock footer %}
       <script src="{% static 'js/all.js' %}"></script>
       <!-- ALL PLUGINS -->
       <script src="{% static 'js/custom.js' %}"></script>

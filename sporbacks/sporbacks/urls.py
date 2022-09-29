@@ -1,5 +1,4 @@
 """sporbacks URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
@@ -18,9 +17,8 @@ from django.urls import path
 from home import views as home
 from django.conf import settings
 from django.conf.urls.static import static
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home.index, name="index"),
+    path('',home.index,name="index"),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
